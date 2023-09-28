@@ -19,6 +19,7 @@ public class MainActivity2 extends AppCompatActivity {
     ChipGroup chipGroup;
     Button btnVoltar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +58,15 @@ public class MainActivity2 extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity2.this, Listadebanda.class);
                 intent.putStringArrayListExtra("estilosSelecionados", (ArrayList<String>) estilosSelecionados);
                 startActivity(intent);
+            }
+        });
+
+            Button conversor = findViewById(R.id.convert);
+            conversor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent converter = new Intent(MainActivity2.this, MainActivityConverte.class);
+                startActivity(converter);
             }
         });
     }
